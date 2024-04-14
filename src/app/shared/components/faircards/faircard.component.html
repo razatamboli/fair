@@ -1,0 +1,21 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <ng-container *ngFor="let card of getcardarr">
+                <div class="card mb-4 p-2"
+                (click)="cardclicked($event)"
+                [id]="card.fairId">
+                    <!-- <h4 class="text-uppercase text-white">{{card.fairName}}</h4>
+                    <div class="insidebox p-2">
+                        <p class="p-0 m-0">Event Type: {{card.type}}</p>
+                        <p class="m-0">Date :{{date | date}}</p>
+                    </div> -->
+                    {{card.fairName}} <br>
+                    Event Type: {{card.type}} <br>
+                    Date :{{date | date}}
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

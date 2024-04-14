@@ -1,0 +1,22 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <ng-container *ngFor="let detail of getdetailsarr">
+                <div class="details mb-4" *ngIf="detail.fairId === this.detailsid" [id]="detail.fairId">
+                    <div class="img">
+                        <img class="bannerimg img-fluid" [src]="detail.bannerUrl" alt="bannerImg">
+                        <div class="img-info text-white">
+                            <h4 class="m-0">{{detail.fairName}}</h4>
+                            <p class="m-0">Event Type: {{detail.type}}</p>
+                            <p>Registration Deadline : {{(date - 1000*86400) | date}}</p>
+                        </div>
+                    </div>
+                    <div class="info-brief">
+                        <p class="p-4" [innerHTML]="detail.candidateDescription"></p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
